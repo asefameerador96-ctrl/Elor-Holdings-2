@@ -120,8 +120,8 @@ export function Stewardship() {
         </div>
 
         <ParallaxImage
-          src="/images/green-rooftops.jpg"
-          alt="Terraced rooftops with planting on a modern Dhaka residential building at dusk"
+          src="/images/green-solar.jpg"
+          alt="Rooftop solar panel array in greater Dhaka with the city skyline under afternoon clouds"
           sizes="(max-width: 1024px) 100vw, 50vw"
           className="min-h-[420px] rounded-lg border border-line lg:min-h-0"
         />

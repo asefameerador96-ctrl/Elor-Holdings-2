@@ -27,6 +27,14 @@ const CREDITS = [
       "https://commons.wikimedia.org/wiki/File:Modern_residential_building_with_terraced_rooftops_at_Mugda_in_Dhaka.jpg",
   },
   {
+    file: "Hatil rooftop solar panels",
+    author: "HokuroN",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Hatil_rooftop_solar_panels.jpg",
+  },
+  {
     file: "Hatirjheel, Dhaka, Bangladesh",
     author: "ASaber91",
     license: "CC BY 2.0",
