@@ -8,17 +8,18 @@ const POSTER = "/media/hero-poster.jpg";
 /**
  * Background video for the hero.
  *
- * - Reduced motion: no <video> at all — the poster frame is the hero.
- *   A background video is exactly the kind of ambient motion the
- *   preference exists to stop.
- * - Coarse pointers get the 720p encode (1.8 MB vs 4.4 MB); phone
- *   networks and batteries shouldn't pay for desktop pixels.
- * - Muted + playsInline are both required for mobile autoplay; the
- *   poster covers the gap until first frame.
+ * Owner's explicit decision (2026-09-20): the FULL 63.5s film at full
+ * picture resolution plays for every visitor — no mobile variant, no
+ * shortened loop. hero-full.mp4 is a CRF 18 (visually transparent)
+ * encode of the complete reel at 91 MB; faststart + preload=metadata
+ * mean it streams progressively behind the poster rather than blocking
+ * paint. Muted is a browser requirement for autoplay, not a choice.
+ *
+ * Reduced motion still gets the static poster — that stays
+ * non-negotiable regardless of file strategy.
  */
 export function HeroVideo() {
   const reduced = useMediaQuery(REDUCED_MOTION_QUERY);
-  const isCoarse = useMediaQuery("(pointer: coarse)");
 
   if (reduced) {
     return (
@@ -34,7 +35,7 @@ export function HeroVideo() {
     <video
       aria-hidden
       className="absolute inset-0 h-full w-full object-cover"
-      src={isCoarse ? "/media/hero-720.mp4" : "/media/hero-1080.mp4"}
+      src="/media/hero-full.mp4"
       poster={POSTER}
       autoPlay
       muted
