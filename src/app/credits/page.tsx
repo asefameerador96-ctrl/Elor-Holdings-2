@@ -35,6 +35,30 @@ const CREDITS = [
       "https://commons.wikimedia.org/wiki/File:Hatil_rooftop_solar_panels.jpg",
   },
   {
+    file: "Laila tower, Gulshan",
+    author: "Wasiul Bahar",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Laila_tower,_Gulshan_2.jpg",
+  },
+  {
+    file: "Banani Lake, Dhaka",
+    author: "Jubair Bin Iqbal",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Banani_Lake,_Dhaka.jpg",
+  },
+  {
+    file: "Hatirjheel bridge at night",
+    author: "Asrir Karim Asif",
+    license: "CC0 (public domain)",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Hatirjheel_,_Dhaka.jpg",
+  },
+  {
     file: "Hatirjheel, Dhaka, Bangladesh",
     author: "ASaber91",
     license: "CC BY 2.0",
