@@ -8,16 +8,19 @@ const POSTER = "/media/hero-poster.jpg";
 /**
  * Background video for the hero.
  *
- * Owner's explicit decision (2026-09-20): the FULL 63.5s film at full
- * picture resolution plays for every visitor — no mobile variant, no
- * shortened loop. hero-full.mp4 is a CRF 18 (visually transparent)
- * encode of the complete reel at 91 MB; faststart + preload=metadata
- * mean it streams progressively behind the poster rather than blocking
- * paint. Muted is a browser requirement for autoplay, not a choice.
+ * Owner's explicit decision (2026-09-20): the ORIGINAL film file,
+ * byte-for-byte (149.9 MB, 63.5s, 1920x1080), for every visitor.
+ * GitHub's 100 MB cap rules the repo out, so it is served from Vercel
+ * Blob (store elor-hero) — the URL below is that store's public CDN
+ * address. Muted is a browser requirement for autoplay, not a choice;
+ * the file's letterbox bars are part of its pixels and will show.
  *
  * Reduced motion still gets the static poster — that stays
  * non-negotiable regardless of file strategy.
  */
+const FILM_URL =
+  "https://yuwcvgwwgwizeppn.public.blob.vercel-storage.com/hero-film.mp4";
+
 export function HeroVideo() {
   const reduced = useMediaQuery(REDUCED_MOTION_QUERY);
 
@@ -35,7 +38,7 @@ export function HeroVideo() {
     <video
       aria-hidden
       className="absolute inset-0 h-full w-full object-cover"
-      src="/media/hero-full.mp4"
+      src={FILM_URL}
       poster={POSTER}
       autoPlay
       muted
