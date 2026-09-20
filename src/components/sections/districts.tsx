@@ -40,7 +40,7 @@ const DISTRICTS: {
       },
       {
         src: "/images/districts/banani-2.jpg",
-        alt: "Stone-finished modern kitchen interior in a Banani residence",
+        alt: "Sunlit modern living room with leather sofas and marble floor in a Banani residence",
       },
     ],
   },
