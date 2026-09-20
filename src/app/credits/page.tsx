@@ -7,24 +7,17 @@ export const metadata: Metadata = {
 
 /**
  * CC attribution page. The Wikimedia Commons licenses used on this
- * site (CC BY 2.0 / CC BY-SA 4.0) require author and license credit;
- * this page is linked from the footer of every page.
+ * site (CC BY-SA 4.0) require author and license credit; this page is
+ * linked from the footer of every page. District photography is
+ * supplied by Elor Holdings and is not covered by these licenses.
  */
 const CREDITS = [
   {
-    file: "Dhaka City Gulshan 10 / 11 / 12",
+    file: "Dhaka City Gulshan 10 (social preview image)",
     author: "IbnSina20",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Dhaka_City_Gulshan_10.jpg",
-  },
-  {
-    file: "Modern residential building with terraced rooftops at Mugda in Dhaka",
-    author: "A S M Jobaer",
-    license: "CC BY-SA 4.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Modern_residential_building_with_terraced_rooftops_at_Mugda_in_Dhaka.jpg",
   },
   {
     file: "Hatil rooftop solar panels",
@@ -33,38 +26,6 @@ const CREDITS = [
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:Hatil_rooftop_solar_panels.jpg",
-  },
-  {
-    file: "Laila tower, Gulshan",
-    author: "Wasiul Bahar",
-    license: "CC BY-SA 4.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Laila_tower,_Gulshan_2.jpg",
-  },
-  {
-    file: "Banani Lake, Dhaka",
-    author: "Jubair Bin Iqbal",
-    license: "CC BY-SA 4.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Banani_Lake,_Dhaka.jpg",
-  },
-  {
-    file: "Hatirjheel bridge at night",
-    author: "Asrir Karim Asif",
-    license: "CC0 (public domain)",
-    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Hatirjheel_,_Dhaka.jpg",
-  },
-  {
-    file: "Hatirjheel, Dhaka, Bangladesh",
-    author: "ASaber91",
-    license: "CC BY 2.0",
-    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Hatirjheel,_Dhaka,_Bangladesh_(35715286874).jpg",
   },
   {
     file: "A modern building exterior at night",
@@ -84,8 +45,8 @@ export default function CreditsPage() {
         Image credits
       </h1>
       <p className="measure mt-6 text-muted">
-        Photography of Dhaka on this site is used under Creative Commons
-        licenses from Wikimedia Commons. Our thanks to the photographers.
+        Some photography on this site is used under Creative Commons licenses
+        from Wikimedia Commons. Our thanks to the photographers.
       </p>
 
       <ul className="mt-12 divide-y divide-line border-t border-line">
@@ -113,7 +74,8 @@ export default function CreditsPage() {
       </ul>
 
       <p className="mt-10 text-sm text-muted">
-        Background film: original footage, Elor Holdings Bangladesh.
+        District photography and background film: supplied by Elor Holdings
+        Bangladesh.
       </p>
 
       <Link
