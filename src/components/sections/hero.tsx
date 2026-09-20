@@ -4,15 +4,16 @@ import { SITE } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden grain">
+    <section className="relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <HeroVideo />
       </div>
 
-      {/* Scrim guarantees text contrast over any video frame. */}
+      {/* Bottom-anchored scrim only: the upper two-thirds of the video
+          stays untouched; text keeps contrast where it actually sits. */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-bg via-bg/55 to-bg/10"
+        className="absolute inset-x-0 bottom-0 -z-10 h-[45%] bg-gradient-to-t from-bg/90 via-bg/40 to-transparent"
       />
 
       <div className="mx-auto w-full max-w-7xl px-6 pb-16 sm:px-10 sm:pb-24">
@@ -30,23 +31,13 @@ export function Hero() {
           </h1>
         </Reveal>
 
-        <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-          <Reveal index={2}>
-            <p className="measure text-lg text-muted">
-              {SITE.tagline} We manage, let, and broker property across
-              Dhaka&rsquo;s prime districts &mdash; and push every building we
-              touch toward a longer, greener life.
-            </p>
-          </Reveal>
-          <Reveal index={3}>
-            <p
-              aria-hidden
-              className="shrink-0 text-xs uppercase tracking-[0.3em] text-muted"
-            >
-              00 &mdash; scroll
-            </p>
-          </Reveal>
-        </div>
+        <Reveal index={2} className="mt-10">
+          <p className="measure text-lg text-muted">
+            {SITE.tagline} We manage, let, and broker property across
+            Dhaka&rsquo;s prime districts &mdash; and push every building we
+            touch toward a longer, greener life.
+          </p>
+        </Reveal>
       </div>
     </section>
   );
